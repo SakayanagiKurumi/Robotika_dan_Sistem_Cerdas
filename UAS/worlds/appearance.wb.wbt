@@ -1,0 +1,83 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/OldSteel.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.1822558062470293 0.05125687215144487 0.9819142295264366 2.6027389891317334
+  position 1.28181490410613 -0.6749024647680801 0.6564633298761418
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1 1
+}
+WoodenBox {
+  translation 0.282381 -0.229961 0.05
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.335929 0.0787777 0.05
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.101721 0.157876 0.05
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+E-puck {
+  hidden position_0_0 23.078356564480618
+  hidden position_0_1 25.352855692644546
+  hidden linearVelocity_0 0.02997501418451152 0.047425806288140436 -3.517658911433454e-08
+  hidden angularVelocity_0 0.003006480901423693 -0.0018984126720523122 0.09242272711261182
+  hidden rotation_1 0 1 0 6.1093652939403755
+  hidden linearVelocity_1 0.028681783924800336 0.04537991920992505 -1.1942271616060056e-09
+  hidden angularVelocity_1 -2.259468294111551 1.4279783340258634 0.09416644625862665
+  hidden rotation_2 0 1 0 4.703726620069197
+  hidden linearVelocity_2 0.03124896418602294 0.04944189690640572 2.306770729987788e-09
+  hidden angularVelocity_2 -2.481598780122216 1.568491335084872 0.09444450286191051
+  translation 0.056185248801780864 0.45170855611080074 -6.43210272549214e-05
+  rotation -9.675591588602581e-05 0.00041817357101687125 0.9999999078845744 1.0088675498104844
+}
+Solid {
+  translation 0.2 0.2 0.2
+  children [
+    Shape {
+      appearance OldSteel {
+        textureTransform TextureTransform {
+        }
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+      }
+    }
+  ]
+}
+Solid {
+  translation 0.2 0.2 0.2
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "red_brick_wall.jpg"
+          ]
+        }
+      }
+      geometry Sphere {
+        radius 0.05
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE BALL_GEOMETRY
+}
